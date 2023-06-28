@@ -2,26 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .checkout-nav {
+    @apply relative after:absolute after:border-y-[25px] after:border-l-[25px] after:border-l-c-gray2 -right-[40px] top-0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+[data-state="open"] > .dropdown-icon {
+  @apply rotate-180;
+}
+
+.CollapsibleChevron {
+  transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.CollapsibleTrigger[data-state="open"] > .CollapsibleChevron {
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(184, 184, 187) !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #082842 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+}
+
+.book-card .swiper-button-next {
+  right: 25px;
+  color: #082842 !important;
+}
+
+.book-card .swiper-button-prev {
+  left: 25px;
+  color: #082842 !important;
+}
+
+@media (max-width: 640px) {
+  .book-card .swiper-button-next {
+    right: 3px;
+  }
+
+  .book-card .swiper-button-prev {
+    left: 3px;
+  }
+}
+
+.stationery-card .swiper-button-next {
+  right: 25px;
+  color: #082842 !important;
+}
+
+.stationery-card .swiper-button-prev {
+  left: 25px;
+  color: #082842 !important;
+}
+
+@media (max-width: 640px) {
+  .stationery-card .swiper-button-next {
+    right: -8px;
+  }
+
+  .stationery-card .swiper-button-prev {
+    left: -8px;
+  }
+}
+
+.book-card .swiper,
+.stationery-card .swiper {
+  position: static;
+  overflow: hidden;
 }

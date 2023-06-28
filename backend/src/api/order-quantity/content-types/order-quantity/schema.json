@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_quantities",
+  "info": {
+    "singularName": "order-quantity",
+    "pluralName": "order-quantities",
+    "displayName": "Order Quantity"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "type": "biginteger"
+    },
+    "book": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::book.book"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "order_quantities"
+    }
+  }
+}

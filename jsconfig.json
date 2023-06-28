@@ -1,7 +1,24 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/public-images/*": ["public/images/*"],
+      "@/components-navigation/*": ["app/components/Navigation/*"],
+      "@/components-home/*": ["app/components/Home/*"],
+      "@/components-about/*": ["app/components/About/*"],
+      "@/components-category/*": ["app/components/Category/*"],
+      "@/components-assest/*": ["app/components/AllAssest/*"],
+      "@/components-bookDetails/*": ["app/components/BookDetails/*"],
+      "@/components-stationery/*": ["app/components/Stationery/*"],
+      "@/components-checkout/*": ["app/components/Checkout/*"],
+      "@/components-account/*": ["app/components/Account/*"],
+      "@/components-auth/*": ["app/components/Auth/*"],
+      "@/components-search/*": ["app/components/Search/*"],
+      "@/loading-skeletons/*": ["app/loading-skeletons/*"],
+      "@/lib-utils/*": ["lib/utils/*"],
+      "@/lib-store/*": ["lib/store/*"],
+      "@/lib-api": ["lib/api"],
+      "@/lib-hook/*": ["lib/hooks/*"]
     }
   }
 }
