@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "book-template": "url('/images/book-template.jpg')",
+        banner1: "url('/images/banner1.png')",
+        banner2: "url('/images/banner2.jpg')",
+        banner3: "url('/images/banner3.jpg')",
       },
       fontFamily: {
         lato: ["var(--font-nunito)"],

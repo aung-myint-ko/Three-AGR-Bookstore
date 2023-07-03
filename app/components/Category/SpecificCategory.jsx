@@ -9,13 +9,14 @@ import { useSearchParams } from "next/navigation";
 import { BookCardSkeleton } from "@/loading-skeletons/CardSkeleton";
 import Error from "@/components-assest/Error";
 
-const SpecificCategory = ({ categorySlug }) => {
+const SpecificCategory = ({ categorySlug, specificCategory }) => {
   const pageParams = useSearchParams();
   const pageNo = pageParams.get("page");
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ["book-category", categorySlug],
-    queryFn: () => getBooksByCategory(categorySlug, pageNo),
+    queryKey: ["specific-book-category", categorySlug, pageNo],
+    queryFn: () => getBooksByCategory(categorySlug, pageNo, 10),
+    initialData: specificCategory,
   });
 
   if (isError) return <Error />;

@@ -188,6 +188,7 @@ const WriteReview = ({
     onError: (errors) => {},
     onSuccess: (data, variables, context) => {
       queryClient.invalidateQueries({ queryKey: ["review", bookSlug] });
+      queryClient.invalidateQueries({ queryKey: ["books-details", bookSlug] });
       data && setWriteReview(false);
     },
   });

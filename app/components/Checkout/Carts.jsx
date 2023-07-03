@@ -12,7 +12,9 @@ import CartsSkeleton from "@/loading-skeletons/CartsSkeleton";
 
 const Carts = () => {
   const router = useRouter();
-  const { cartsData, isLoading } = useCarts();
+  const { cartsData, isLoading, totalAmount, totalQuantity } = useCarts();
+
+  console.log(isLoading, cartsData, totalQuantity);
 
   const submitCart = (e) => {
     setCookie("user-buying", "delivery");

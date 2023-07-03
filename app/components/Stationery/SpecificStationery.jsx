@@ -13,7 +13,7 @@ const SpecificStationery = ({ stationerySlug, stationeryData }) => {
   const pageNo = pageParams.get("page");
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ["stationery-gifts", stationerySlug],
+    queryKey: ["specific-stationery-gifts", stationerySlug, pageNo],
     queryFn: () => getStationeryByCategory(stationerySlug, pageNo, 10),
     initialData: stationeryData,
   });
