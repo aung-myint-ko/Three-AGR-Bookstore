@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import { deleteCookie } from "cookies-next";
 import useUser from "@/lib-hook/useUser";
 import Loading from "@/components-assest/Loading";
-import secureLocalStorage from "react-secure-storage";
 
 const Account = ({ profile }) => {
   const router = useRouter();

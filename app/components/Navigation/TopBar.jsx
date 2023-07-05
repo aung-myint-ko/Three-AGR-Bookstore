@@ -8,7 +8,7 @@ import useUser from "@/lib-hook/useUser";
 import useInitialsName from "@/lib-hook/useInitialsName";
 
 const TopBar = () => {
-  const { userData, isLoading, isError } = useUser();
+  const { userData } = useUser();
 
   const imageUrl = userData?.image?.formats?.thumbnail.url;
 

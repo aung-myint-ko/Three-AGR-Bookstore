@@ -1,7 +1,5 @@
 "use client";
-import Pagination, {
-  PaginationForReviews,
-} from "@/components-assest/Pagination";
+import { PaginationForReviews } from "@/components-assest/Pagination";
 import React, { useState } from "react";
 import Image from "next/image";
 import { IoStar } from "react-icons/io5";

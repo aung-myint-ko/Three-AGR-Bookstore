@@ -16,7 +16,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className=" px-4 md:px-10 lg:px-20 py-10  bg-c-gray2">
+    <div className=" px-4 md:px-10 lg:px-20 py-10 bg-c-gray">
       <div className=" md:flex justify-between items-center mb-7">
         {/* Logo */}
         <Link href={"/"} className="flex items-center gap-x-2 mb-3 md:mb-0">

@@ -2,7 +2,7 @@
 import { useAuthStore } from "@/lib-store/authStore";
 import { deleteCookie } from "cookies-next";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import {
   AiOutlineHistory,
@@ -47,6 +47,7 @@ const PopOver = () => {
 
 const Content = ({ open }) => {
   const router = useRouter();
+  const pathName = usePathname();
   const { cleanUserId } = useAuthStore();
 
   const handleLogout = () => {
@@ -63,13 +64,17 @@ const Content = ({ open }) => {
     >
       <Link
         href={"/account/profile"}
-        className="flex items-center gap-x-3 rounded-sm px-3 py-1 bg-c-blue text-white"
+        className={`${
+          pathName == "/account/profile" && "bg-c-blue text-white"
+        } flex items-center gap-x-3 rounded-sm px-3 py-1 `}
       >
         <AiOutlineUser size={24} /> Profile
       </Link>
       <Link
         href={"/account/history"}
-        className="flex items-center gap-x-3 rounded-sm px-2 py-1"
+        className={`${
+          pathName == "/account/history" && "bg-c-blue text-white"
+        } flex items-center gap-x-3 rounded-sm px-2 py-1`}
       >
         <AiOutlineHistory size={24} /> History
       </Link>
