@@ -19,7 +19,7 @@ const OrderSuccess = ({ slug }) => {
 
   useEffect(() => {
     cleanCart();
-  }, []);
+  }, [cleanCart]);
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["current-order", orderId],

@@ -22,15 +22,15 @@ const MonthlyBook = () => {
 
         <div className=" md:w-[70%]">
           <h1 className=" text-white font-itim text-xl md:text-3xl mb-3 md:mb-5">
-            "It's the possibility of having a dream come true that makes life
-            interesting. There is always something left."
+            &quot;It's the possibility of having a dream come true that makes
+            life interesting. There is always something left.&quot;
           </h1>
           <div className=" text-right">
             <h1 className="text-white font-itim text-xl md:text-3xl mb-1  ">
               J.K Rolin (Author)
             </h1>
             <p className=" text-c-yellow font-light font-lato text-sm ">
-              Quotes from "Harry Potter" book
+              Quotes from &quot;Harry Potter&quot; book
             </p>
           </div>
         </div>

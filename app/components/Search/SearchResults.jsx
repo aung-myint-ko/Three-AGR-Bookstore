@@ -25,7 +25,7 @@ const SearchResults = () => {
       ) : (
         <>
           <h1 className=" text-center font-josefin text-2xl md:text-3xl font-bold my-2 tracking-wide">
-            Search Result For "{search}"
+            Search Result For &quot;{search}&quot;
           </h1>
           <SearchResultsByProducts
             products={data}

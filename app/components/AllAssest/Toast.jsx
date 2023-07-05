@@ -12,7 +12,7 @@ const Toast = () => {
   const [open, setOpen] = useState(true);
   useEffect(() => {
     setOpen(true);
-  }, [message, setToast]);
+  }, [message, setToast, cleanToast]);
 
   useEffect(() => {
     if (!open) {

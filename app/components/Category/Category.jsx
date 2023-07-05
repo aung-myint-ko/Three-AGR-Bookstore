@@ -71,46 +71,49 @@ const CategorizedBooks = ({ categoryName, categoryLists }) => {
         {categoryName}
       </h1>
       {categoryLists.map((categoryList, index) => {
-        const { data, isLoading, isError } = useQuery({
-          queryKey: ["book-category", categoryList.slug],
-          queryFn: () => getBooksByCategory(categoryList.slug, 1, 5),
-        });
-
-        const books = data ? data.data : [];
-
-        return (
-          <div key={index} className=" mb-8 pb-8 border-b border-black/20">
-            <div className=" flex justify-between items-center mb-5">
-              <h1 className="font-lato text-xl font-medium italic">
-                {categoryList.name}
-              </h1>
-              <Link
-                href={categoryList.url}
-                className="px-4 py-1 text-base rounded-sm bg-c-blue/90 text-white font-lato hover:shadow-md hover:bg-c-blue/100"
-              >
-                See More
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3">
-              {isLoading
-                ? [0, 1, 2, 3, 4].map((index) => (
-                    <BookCardSkeleton key={index} />
-                  ))
-                : books.map((book) => {
-                    return (
-                      <Card
-                        key={book.id}
-                        id={book.id}
-                        data={book.attributes}
-                        truncateCount={15}
-                      />
-                    );
-                  })}
-            </div>
-          </div>
-        );
+        return <BookGroup key={index} categoryList={categoryList} />;
       })}
     </div>
+  );
+};
+
+const BookGroup = ({ categoryList }) => {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["book-category", categoryList.slug],
+    queryFn: () => getBooksByCategory(categoryList.slug, 1, 5),
+  });
+
+  const books = data ? data.data : [];
+  return (
+    <>
+      <div className=" mb-8 pb-8 border-b border-black/20">
+        <div className=" flex justify-between items-center mb-5">
+          <h1 className="font-lato text-xl font-medium italic">
+            {categoryList.name}
+          </h1>
+          <Link
+            href={categoryList.url}
+            className="px-4 py-1 text-base rounded-sm bg-c-blue/90 text-white font-lato hover:shadow-md hover:bg-c-blue/100"
+          >
+            See More
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3">
+          {isLoading
+            ? [0, 1, 2, 3, 4].map((index) => <BookCardSkeleton key={index} />)
+            : books.map((book) => {
+                return (
+                  <Card
+                    key={book.id}
+                    id={book.id}
+                    data={book.attributes}
+                    truncateCount={15}
+                  />
+                );
+              })}
+        </div>
+      </div>{" "}
+    </>
   );
 };
 
