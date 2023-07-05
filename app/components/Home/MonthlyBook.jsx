@@ -22,8 +22,8 @@ const MonthlyBook = () => {
 
         <div className=" md:w-[70%]">
           <h1 className=" text-white font-itim text-xl md:text-3xl mb-3 md:mb-5">
-            &quot;It's the possibility of having a dream come true that makes
-            life interesting. There is always something left.&quot;
+            &quot;It&apos;s the possibility of having a dream come true that
+            makes life interesting. There is always something left.&quot;
           </h1>
           <div className=" text-right">
             <h1 className="text-white font-itim text-xl md:text-3xl mb-1  ">

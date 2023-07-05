@@ -95,7 +95,7 @@ const NoResults = ({ query }) => {
       <h1 className="  font-medium text-4xl mb-2">
         Your Search Returns No Results.
       </h1>
-      <p className=" opacity-70 ">Search results for "{query}"</p>
+      <p className=" opacity-70 ">Search results for &quot;{query}&quot;</p>
     </div>
   );
 };

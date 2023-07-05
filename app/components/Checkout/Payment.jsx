@@ -1,6 +1,6 @@
 "use client";
 import BreadCrumb from "@/components-assest/BreadCrumb";
-import React, { useState } from "react";
+import React from "react";
 import Input from "./Input";
 import { PaymentNav } from "./CheckoutNav";
 import OrderSummary from "./OrderSummary";
@@ -13,10 +13,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useOrderStore } from "@/lib-store/orderStore";
-import { useCartStore } from "@/lib-store/cartStore";
 import { useMutation } from "@tanstack/react-query";
 import { postOrdersByUserId } from "@/lib-api";
-import { useJwtEncode } from "@/lib-hook/useJwt";
+import { jwtEncode } from "@/lib-hook/useJwt";
 import useUser from "@/lib-hook/useUser";
 import { getCookie, setCookie } from "cookies-next";
 import useCarts from "@/lib-hook/useCarts";
@@ -57,7 +56,7 @@ const Payment = () => {
     mutationFn: postOrdersByUserId,
     onError: (error) => {},
     onSuccess: (data, variables, context) => {
-      const slug = useJwtEncode(data.data.id);
+      const slug = jwtEncode(data.data.id);
       setCookie("user-buying", "success", {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
       });

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BsCart4 } from "react-icons/bs";
 import Link from "next/link";
 import useCarts from "@/lib-hook/useCarts";

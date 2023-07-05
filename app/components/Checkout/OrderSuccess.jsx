@@ -1,6 +1,6 @@
 "use client";
 import { getOrdersDetailsById } from "@/lib-api";
-import { useJwtDecode } from "@/lib-hook/useJwt";
+import { jwtDecode } from "@/lib-hook/useJwt";
 import { useQuery } from "@tanstack/react-query";
 import { setCookie } from "cookies-next";
 import Image from "next/image";
@@ -10,12 +10,11 @@ import { FcOk } from "react-icons/fc";
 import { IoIosArrowBack } from "react-icons/io";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useCartStore } from "@/lib-store/cartStore";
-import Error from "@/components-assest/Error";
 
 const OrderSuccess = ({ slug }) => {
   const router = useRouter();
   const { cleanCart } = useCartStore();
-  const { id: orderId } = useJwtDecode(slug);
+  const { id: orderId } = jwtDecode(slug);
 
   useEffect(() => {
     cleanCart();
