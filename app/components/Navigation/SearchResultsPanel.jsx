@@ -21,7 +21,7 @@ export const SearchResultsForDesktop = ({ products, link, setPanel }) => {
     };
     document.body.addEventListener("click", ClosePanel);
     return () => document.body.removeEventListener("click", ClosePanel);
-  }, []);
+  }, [setPanel]);
 
   return (
     <div className=" overflow-auto md:overflow-hidden block absolute left-0 top-[45px] md:top-[116px] w-full max-h-[180px] md:max-h-[278px] py-4 md:pt-5 md:pb-8 px-4 md:px-10 lg:px-20 bg-slate-100 shadow-md">
@@ -74,6 +74,13 @@ const ResultsCard = ({ attributes }) => {
   const productCategory =
     attributes.product_categories?.data[0]?.attributes.slug;
 
+  const words40Name = useTruncate(attributes.name, 40);
+  const words40Title = useTruncate(attributes.title, 40);
+  const words25Name = useTruncate(attributes.name, 25);
+  const words25Title = useTruncate(attributes.title, 25);
+  const words13Name = useTruncate(attributes.name, 13);
+  const words13Title = useTruncate(attributes.title, 13);
+
   return (
     <Link
       href={
@@ -94,19 +101,13 @@ const ResultsCard = ({ attributes }) => {
         />
       </div>
       <h1 className=" md:hidden text-xs font-lato opacity-80">
-        {attributes.name
-          ? useTruncate(attributes.name, 40)
-          : useTruncate(attributes.title, 40)}
+        {attributes.name ? words40Name : words40Title}
       </h1>
       <h1 className=" hidden md:block lg:hidden text-sm text-center font-lato opacity-80">
-        {attributes.name
-          ? useTruncate(attributes.name, 13)
-          : useTruncate(attributes.title, 13)}
+        {attributes.name ? words13Name : words13Title}
       </h1>
       <h1 className=" hidden lg:block text-sm text-center font-lato opacity-80">
-        {attributes.name
-          ? useTruncate(attributes.name, 25)
-          : useTruncate(attributes.title, 25)}
+        {attributes.name ? words25Name : words25Title}
       </h1>
     </Link>
   );

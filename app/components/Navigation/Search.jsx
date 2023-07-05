@@ -107,7 +107,7 @@ const SearchForMobileTablet = ({
     };
     document.body.addEventListener("click", CloseSearch);
     return () => document.body.removeEventListener("click", CloseSearch);
-  }, []);
+  }, [setSearchOpen]);
 
   return (
     <div

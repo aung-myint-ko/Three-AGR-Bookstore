@@ -18,7 +18,7 @@ const Toast = () => {
     if (!open) {
       cleanToast();
     }
-  }, [open]);
+  }, [open, cleanToast]);
 
   if (!show) {
     return null;
