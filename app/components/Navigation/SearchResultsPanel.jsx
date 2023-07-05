@@ -74,15 +74,12 @@ const ResultsCard = ({ attributes }) => {
   const productCategory =
     attributes.product_categories?.data[0]?.attributes.slug;
 
-  const words40Name = attributes.name
-    ? useTruncate(attributes.name, 40)
-    : useTruncate(attributes.title, 40);
-  const words25Name = attributes.name
-    ? useTruncate(attributes.name, 25)
-    : useTruncate(attributes.title, 25);
-  const words13Name = attributes.name
-    ? useTruncate(attributes.name, 13)
-    : useTruncate(attributes.title, 13);
+  const words40Name = useTruncate(attributes.name, 40);
+  const words40Title = useTruncate(attributes.title, 40);
+  const words25Name = useTruncate(attributes.name, 25);
+  const words25Title = useTruncate(attributes.title, 25);
+  const words13Name = useTruncate(attributes.name, 13);
+  const words13Title = useTruncate(attributes.title, 13);
 
   return (
     <Link
@@ -103,12 +100,14 @@ const ResultsCard = ({ attributes }) => {
           className={` w-auto h-[70%] `}
         />
       </div>
-      <h1 className=" md:hidden text-xs font-lato opacity-80">{words40Name}</h1>
+      <h1 className=" md:hidden text-xs font-lato opacity-80">
+        {attributes.name ? words40Name : words40Title}
+      </h1>
       <h1 className=" hidden md:block lg:hidden text-sm text-center font-lato opacity-80">
-        {words13Name}
+        {attributes.name ? words13Name : words13Title}
       </h1>
       <h1 className=" hidden lg:block text-sm text-center font-lato opacity-80">
-        {words25Name}
+        {attributes.name ? words25Name : words25Title}
       </h1>
     </Link>
   );

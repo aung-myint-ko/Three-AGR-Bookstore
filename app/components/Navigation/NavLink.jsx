@@ -7,6 +7,7 @@ import * as Collapsible from "@radix-ui/react-collapsible";
 import useUser from "@/lib-hook/useUser";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import useInitialsName from "@/lib-hook/useInitialsName";
 
 export const NavLinkForDeskstop = ({ navLists }) => {
   const pathName = usePathname();
@@ -217,18 +218,7 @@ export const AuthButtonMobile = ({ closeNav }) => {
 
   const imageName = userData?.image?.name;
 
-  function getInitialsName(name) {
-    const words = name?.split(" ");
-    let initials = "";
-    if (words) {
-      for (let i = 0; i < words.length; i++) {
-        initials += words[i][0];
-      }
-      return initials.toUpperCase();
-    }
-  }
-
-  const name = getInitialsName(userData?.username);
+  const name = useInitialsName(userData?.username);
   return (
     <ul className=" font-lato border-t border-slate-300 mt-4 px-4 pt-5">
       {userData ? (
@@ -237,7 +227,7 @@ export const AuthButtonMobile = ({ closeNav }) => {
           onClick={closeNav}
           className={`flex items-center gap-x-4 p-2 bg-c-gray2 rounded `}
         >
-          {userData?.image ? (
+          {!userData?.image ? (
             <>
               <Image
                 src={imageUrl}
@@ -249,7 +239,7 @@ export const AuthButtonMobile = ({ closeNav }) => {
               />
             </>
           ) : (
-            <div className=" w-full h-full bg-orange-500 flex justify-center items-center">
+            <div className="  w-9 h-9 rounded-full bg-orange-500 flex justify-center items-center">
               <h1 className=" text-white font-lato font-medium">
                 {name?.length <= 1 ? name[0] : name[0] + name[1]}
               </h1>

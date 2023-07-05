@@ -27,6 +27,7 @@ const Search = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     router.push(`/search?query=${encodedQuery}&page=1`);
+    setSearchOpen(false);
   };
 
   const { data } = useQuery({
@@ -75,6 +76,7 @@ const Search = () => {
           handleChange={handleChange}
           setSearchOpen={setSearchOpen}
           handleSearchClose={handleSearchClose}
+          handleSearch={handleSearch}
         />
       )}
       {data?.length >= 1 && panel ? (
@@ -94,6 +96,7 @@ const Search = () => {
 const SearchForMobileTablet = ({
   setSearchOpen,
   handleSearchClose,
+  handleSearch,
   queryParams,
   handleChange,
 }) => {
@@ -110,8 +113,9 @@ const SearchForMobileTablet = ({
   }, [setSearchOpen]);
 
   return (
-    <div
+    <form
       ref={SearchRef}
+      onSubmit={handleSearch}
       className=" md:flex flex-col lg:hidden px-4 md:px-10 w-full h-[45px] md:h-[116px] md:py-5 absolute top-0 left-0 bg-c-gray z-30"
     >
       <h1 className=" hidden md:block lg:hidden font-josefin text-xl pb-2 ">
@@ -127,11 +131,13 @@ const SearchForMobileTablet = ({
           autoFocus
         />
         <div className=" basis-1/5 flex justify-end items-center gap-7">
-          <GoSearch color="#082842" size={24} className="" />
+          <button type="submit">
+            <GoSearch color="#082842" size={24} />
+          </button>
           <HiX onClick={handleSearchClose} color="#082842" size={28} />
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

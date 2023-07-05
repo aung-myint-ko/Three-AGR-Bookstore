@@ -5,8 +5,7 @@ import Link from "next/link";
 import useCarts from "@/lib-hook/useCarts";
 
 const Cart = ({ color }) => {
-  const { totalQuantity, cartsData } = useCarts();
-  console.log(cartsData);
+  const { totalQuantity } = useCarts();
   return (
     <Link href={"/checkout/carts"} className=" relative">
       <BsCart4 size={24} color={color} />
