@@ -91,11 +91,13 @@ const SearchResultsByProducts = ({ products, query, isLoading }) => {
 
 const NoResults = ({ query }) => {
   return (
-    <div className=" font-lato w-full h-[400px] flex flex-col justify-center items-center ">
-      <h1 className="  font-medium text-4xl mb-2">
+    <div className=" px-4 font-lato w-full h-[calc(100vh-94px)] md:h-[400px] flex flex-col justify-center items-center ">
+      <h1 className=" text-center font-medium text-2xl md:text-4xl mb-2">
         Your Search Returns No Results.
       </h1>
-      <p className=" opacity-70 ">Search results for &quot;{query}&quot;</p>
+      <p className=" text-center opacity-70 ">
+        Search results for &quot;{query}&quot;
+      </p>
     </div>
   );
 };

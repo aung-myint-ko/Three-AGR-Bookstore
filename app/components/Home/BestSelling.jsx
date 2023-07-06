@@ -13,7 +13,6 @@ import { Navigation } from "swiper";
 import { useQuery } from "@tanstack/react-query";
 import { getBooksByCategory } from "@/lib-api";
 import { BookCardSkeleton } from "@/loading-skeletons/CardSkeleton";
-import Link from "next/link";
 
 const BestSelling = ({ bestSellings }) => {
   const { data, isLoading, isError } = useQuery({
@@ -27,7 +26,7 @@ const BestSelling = ({ bestSellings }) => {
   const bestSellingBooks = data?.data;
 
   return (
-    <div className=" py-10 md:py-14 bg-c-gray">
+    <div className=" py-10 md:py-14 ">
       <h1 className=" text-center font-josefin font-bold text-2xl md:text-3xl md:mb-2">
         Best Selling Books
       </h1>

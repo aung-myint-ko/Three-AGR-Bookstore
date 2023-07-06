@@ -12,7 +12,7 @@ const NewRelease = () => {
     <div className=" grid grid-cols-1 md:grid-cols-2">
       <NewReleaseCard
         image={Template1}
-        slug={"/category/health-lifestyle?page=1"}
+        slug={"/category/health-and-lifestyle?page=1"}
         title={"Health"}
         desc={"History is not the past but a map of the past"}
         color={"white"}
@@ -33,7 +33,7 @@ const NewRelease = () => {
       />
       <NewReleaseCard
         image={Template4}
-        slug={"/category/computing-technology?page=1"}
+        slug={"/category/computing-and-technology?page=1"}
         title={"Technology"}
         desc={"History is not the past but a map of the past"}
         color={"white"}

@@ -24,7 +24,7 @@ export const SearchResultsForDesktop = ({ products, link, setPanel }) => {
   }, [setPanel]);
 
   return (
-    <div className=" overflow-auto md:overflow-hidden block absolute left-0 top-[45px] md:top-[116px] w-full max-h-[180px] md:max-h-[278px] py-4 md:pt-5 md:pb-8 px-4 md:px-10 lg:px-20 bg-slate-100 shadow-md">
+    <div className=" overflow-auto md:overflow-hidden block absolute left-0 top-[45px] md:top-[116px] w-full max-h-[230px] md:max-h-[278px] py-4 md:pt-5 md:pb-8 px-4 md:px-10 lg:px-20 bg-slate-100 shadow-md">
       {products.length >= 5 && (
         <Link
           href={link}

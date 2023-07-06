@@ -36,7 +36,7 @@ const OrderDetails = ({ orderId }) => {
       <div className="pb-5 mt-5 md:mt-8 mb-2 border-b border-black/20 flex justify-between items-center">
         <div>
           <h1 className=" text-2xl md:text-4xl text-c-blue font-josefin font-semibold md:mb-3">
-            Order #1
+            Order #{orderId}
           </h1>
           <p className=" text-sm md:text-base font-lato font-light opacity-80">
             {date}

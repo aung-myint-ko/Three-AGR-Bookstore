@@ -16,7 +16,7 @@ const PopularBook = ({ popularBooks }) => {
 
   const editorChoiceBooks = data?.data;
   return (
-    <div className=" px-4 md:px-10 lg:px-20 py-10 md:py-12 lg:py-14 bg-c-gray">
+    <div className=" px-4 md:px-10 lg:px-20 py-10 md:py-12 lg:py-14">
       <h1 className="  font-josefin font-bold text-2xl md:text-3xl text-center mb-5 md:mb-8">
         Popular Books
       </h1>

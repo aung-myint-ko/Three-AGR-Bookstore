@@ -20,7 +20,7 @@ const OrderSuccess = ({ slug }) => {
     cleanCart();
   }, [cleanCart]);
 
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["current-order", orderId],
     queryFn: () => getOrdersDetailsById(orderId),
   });
@@ -60,8 +60,8 @@ const OrderSuccess = ({ slug }) => {
               </p>
             </div>
             <div className=" lg:row-span-3 p-3 md:p-5 rounded-lg border border-black/20 ">
-              <div className=" max-h-[285px] overflow-auto">
-                <table className=" w-full">
+              <div className=" max-h-[285px] overflow-x-auto">
+                <table className=" w">
                   <tbody>
                     {orderItems &&
                       orderItems.map((item, index) => {
@@ -77,7 +77,10 @@ const OrderSuccess = ({ slug }) => {
               </div>
 
               <div className=" font-lato text-xl font-medium flex justify-between pt-5 border-t border-b/20">
-                <h1>Total (Include Tax - 50 Ks)</h1>
+                <h1>
+                  Total{" "}
+                  <span className={` text-sm`}>(Include Tax - 50 Ks)</span>
+                </h1>
                 <h2>{(Number(totalAmount) + 50).toLocaleString()} Ks</h2>
               </div>
             </div>

@@ -34,7 +34,7 @@ const Hero = () => {
           clickable: true,
         }}
         autoplay={{
-          delay: 500000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         navigation={true}

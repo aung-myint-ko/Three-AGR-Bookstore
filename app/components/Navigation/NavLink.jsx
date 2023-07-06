@@ -227,7 +227,7 @@ export const AuthButtonMobile = ({ closeNav }) => {
           onClick={closeNav}
           className={`flex items-center gap-x-4 p-2 bg-c-gray2 rounded `}
         >
-          {!userData?.image ? (
+          {userData?.image ? (
             <>
               <Image
                 src={imageUrl}

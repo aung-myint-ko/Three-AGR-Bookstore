@@ -4,7 +4,7 @@ import BookMonth from "@/public-images/bom.jpg";
 
 const MonthlyBook = () => {
   return (
-    <div className="px-4 sm:px-14 md:px-[100px] lg:px-[180px] py-10 md:py-14 bg-c-blue   ">
+    <div className="px-4 sm:px-14 md:px-[100px] lg:px-[180px] py-10 md:py-14 bg-c-blue">
       <h1 className=" text-c-yellow text-center font-josefin font-bold text-2xl md:text-3xl mb-5 md:mb-3">
         Books Of The Month
       </h1>

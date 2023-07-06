@@ -39,7 +39,7 @@ const Stationery = () => {
 
 const StationeryNav = () => {
   return (
-    <ul className=" hidden md:block md:basis-1/4 lg:basis-1/5 relative after:w-[1px] after:absolute after:top-0 after:right-0 after:h-full after:bg-black/40 ">
+    <ul className=" hidden md:block md:basis-1/4 lg:basis-1/5 relative after:w-[1px] after:absolute after:top-0 after:right-0 after:h-full after:bg-black/20 ">
       <h1 className=" font-semibold font-josefin mb-4 text-xl">
         {stationeryLists.name}
       </h1>

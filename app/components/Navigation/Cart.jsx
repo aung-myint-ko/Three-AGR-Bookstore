@@ -9,11 +9,11 @@ const Cart = ({ color }) => {
   return (
     <Link href={"/checkout/carts"} className=" relative">
       <BsCart4 size={24} color={color} />
-      {
+      {totalQuantity > 0 && (
         <div className=" w-5 h-5 absolute -top-1 -right-3 bg-c-yellow rounded-full flex justify-center items-center">
           <p className=" font-lato text-xs">{totalQuantity}</p>
         </div>
-      }
+      )}
     </Link>
   );
 };
