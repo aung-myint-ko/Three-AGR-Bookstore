@@ -16,16 +16,6 @@ const TopBar = () => {
 
   const name = useInitialsName(userData?.username);
 
-  // const words40Name = attributes.name
-  //   ? useTruncate(attributes.name, 40)
-  //   : useTruncate(attributes.title, 40);
-  // const words25Name = attributes.name
-  //   ? useTruncate(attributes.name, 25)
-  //   : useTruncate(attributes.title, 25);
-  // const words13Name = attributes.name
-  //   ? useTruncate(attributes.name, 13)
-  //   : useTruncate(attributes.title, 13);
-
   return (
     <div className=" hidden md:flex items-center justify-between md:px-10 lg:px-20 py-1 bg-c-blue  ">
       {/* Account icon and login  */}

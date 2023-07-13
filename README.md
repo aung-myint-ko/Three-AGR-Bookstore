@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Three AGR Bookstore
 
-## Getting Started
+![App Screenshot](https://res.cloudinary.com/dzigqxg7j/image/upload/v1689238866/prisma-bookstore/three-agr-bookstore-image.jpg)
 
-First, run the development server:
+This bookstore website is designed to provide you with a seamless and convenient shopping experience, just like any other e-commerce platform. Made with Next.js and Strapi CMS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Create Account
+- See Your Previous Order Details
+- Cart Logic
+- Mobile Friendly
+- Search Functionality
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
+**Frontend Development:** Next.js 13
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Stylling :** TailwindCSS
 
-## Learn More
+**UI Component :** Radix-Ui
 
-To learn more about Next.js, take a look at the following resources:
+**Carousel :** Swiper
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Prototyping :** Figma
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Backend Data :** Strapi CMS
 
-## Deploy on Vercel
+**Database :** PostgreSQL
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Hosting :** Vercel (Frontend), Railway (DB), Render (Backend)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Inspiration and Credits
+
+**For UI/UX and Backend Design**
+
+- [Next Bookstore](https://nextbookstore.vercel.app/)
+- [Waterstones](https://www.waterstones.com/)
+- [Barnes and Noble](https://www.barnesandnoble.com/)
+- [mDrive](https://mdriveasia.com/)
+
+## Authors
+
+- [@aung-myint-ko](https://github.com/aung-myint-ko)
