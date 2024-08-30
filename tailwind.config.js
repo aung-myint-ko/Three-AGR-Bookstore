@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         lato: ["var(--font-nunito)"],
-        josefin: ["var(--font-nunito)"],
+        josefin: ["var(--font-josefin-sans)"],
         roboto: ["var(--font-roboto-mono)"],
         itim: ["var(--font-itim)"],
       },
