@@ -48,6 +48,7 @@ const Hero = () => {
             alt="book-store"
             fill
             priority
+            sizes="100vw"
           />
           <Image
             src={BookTemplate1Mb}
@@ -55,6 +56,7 @@ const Hero = () => {
             alt="book-store"
             fill
             priority
+            sizes="100vw"
           />
         </SwiperSlide>
         <SwiperSlide className="  relative w-full h-[300px] sm:h-[400px] lg:h-[510px]">
@@ -64,6 +66,7 @@ const Hero = () => {
             alt="book-store"
             fill
             priority
+            sizes="100vw"
           />
           <Image
             src={BookTemplate2Mb}
@@ -71,6 +74,7 @@ const Hero = () => {
             alt="book-store"
             fill
             priority
+            sizes="100vw"
           />
         </SwiperSlide>
         <SwiperSlide className="  relative w-full h-[300px] sm:h-[400px] lg:h-[510px]">
@@ -80,6 +84,7 @@ const Hero = () => {
             alt="book-store"
             fill
             priority
+            sizes="100vw"
           />
           <Image
             src={BookTemplate3Mb}
@@ -87,6 +92,7 @@ const Hero = () => {
             alt="book-store"
             fill
             priority
+            sizes="100vw"
           />
         </SwiperSlide>
       </Swiper>

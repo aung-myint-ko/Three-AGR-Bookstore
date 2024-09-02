@@ -280,7 +280,7 @@ const navLists = [
             url: "/category/art-and-photography?page=1",
           },
           { name: "Biography", url: "/category/biography?page=1" },
-          { name: "Bussiness", url: "/category/bussiness?page=1" },
+          { name: "Business", url: "/category/business?page=1" },
           {
             name: "Computing & Technology",
             url: "/category/computing-and-technology?page=1",
