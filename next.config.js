@@ -32,6 +32,7 @@ const nextConfig = {
       "res.cloudinary.com",
       "cdn.waterstones.com",
       "m.media-amazon.com",
+      "ideal-basketball-1910828f89.media.strapiapp.com",
     ],
   },
 };

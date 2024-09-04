@@ -187,9 +187,9 @@ const categoriesLists = [
         slug: "biography",
       },
       {
-        name: "Bussiness",
-        url: "/category/bussiness?page=1",
-        slug: "bussiness",
+        name: "Business",
+        url: "/category/business?page=1",
+        slug: "business",
       },
       {
         name: "Computing & Technology",
