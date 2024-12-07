@@ -134,7 +134,7 @@ const Review = ({ review }) => {
           {userImage ? (
             <Image src={userImage} alt="customer" fill />
           ) : (
-            <h1 className=" text-white font-lato text-5xl font-medium">
+            <h1 className=" text-white font-lato  md:text-5xl font-medium">
               {name.length <= 1 ? name[0] : name[0] + name[1]}
             </h1>
           )}
